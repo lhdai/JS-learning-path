@@ -4,9 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/3bb8299987.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
+    <section class="CurrencyConvert">
+        <div class="container" >
+            <div class="heading-content">
+            <h1>Converter and Counter</h1>
+            </div>
+            <div class="row">
+                <div class="col-sm-5 left">
+                    <div>
+                    <form action="/action_page.php">
+                    <label for="Currency">From currency</label>
+                    <select name="Currency" id="fromCurList">
+                      <option value="vnd">vnd</option>
+                      <option value="usd">usd</option>
+                      <option value="krw">krw</option>
+                    </select>
+                    </form>
+                    </div>
+                    <p>Amount:</p>
+                  <div id="amount-box"><input type="number" id="amount" placeholder="0"/></div>
+            </div>
+            <div class="col-sm-2 middle">
+                <i class="far fa-sync-alt" id ="convertButton" onclick="doConverse()"></i>
+            </div>
+            <div class="col-sm-5 right">
+                  <form action="/action_page.php">
+                    <label for="Currency">To Currency</label>
+                    <select name="Currency" id="fromToList">
+                      <option value="vnd">vnd</option>
+                      <option value="usd">usd</option>
+                      <option value="krw">krw</option>
+                      <option value="eur">eur</option>
+                    </select>
+                  </form>
+                  <p>Amount:</p>
+                  <div class="result-box">
+                    <p id="result">0</p>
+                    </div>
+            </div>
+            </div>
+            <div>
+            <div id="demo">Your number of each denominations</div>
+          </div>
+        </div>
+        
+
+  
+    </section>
+
+
+
+
+
     <script src="index.js"></script>
 </body>
 </html>
